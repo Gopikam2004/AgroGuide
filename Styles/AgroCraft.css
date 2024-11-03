@@ -1,0 +1,102 @@
+body {
+    background-image: url(../Images/Website/Farmer.jpg);
+    background-repeat: no-repeat;
+    text-align: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+#WELCOME {
+    font-size: 70px;
+    font-family: 'Cormorant Infant', serif;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-left: 1%;
+    opacity: 75%;
+    text-shadow: 2px 2px white;
+    text-align: left;
+    color: white;
+}
+
+#are {
+    font-family: 'Cormorant Infant', serif;
+    font-weight: bold;
+    opacity: 100%;
+    padding-top: 1%;
+    font-size: 85px;
+    text-shadow: 2px 2px black;
+}
+
+#linebreak {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#farmer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust the value as needed */
+}
+
+#Farmerbutton {
+    margin-right: 20px; /* Adjust the value as needed */
+    display: inline-block;
+   font-size:xx-large;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+#farmer-image {
+    display: inline-block;
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 200px; /* Adjust the dimensions as needed */
+    height: 200px;
+}
+
+#CropAnalysis {
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 200px;
+    height: 700px;
+    border: none;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
+#Buyerbutton {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    border: none;
+    cursor: pointer;
+    font-size: xx-large;
+}
+
+#link {
+    color: black;
+    text-decoration: none;
+}
+
+#link:hover {
+    color: white;
+    border-radius: 20%;
+    font-weight: bolder;
+    border-width: 4px;
+}
