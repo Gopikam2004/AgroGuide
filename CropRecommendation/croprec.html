@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Crop Recommendation System</h2>
+        <form id="cropForm">
+            <input type="number" id="soil_type" name="soil_type" placeholder="Soil Type" required>
+            <input type="number" id="rainfall" name="rainfall" placeholder="Rainfall" required>
+            <input type="number" id="temperature" name="temperature" placeholder="Temperature" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        document.getElementById('cropForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const nitrogen = document.getElementById('N').value;
+            const phosphorous = document.getElementById('P').value;
+            const pottasium = document.getElementById('K').value;
+            const humidity = document.getElementById('humidity').value;
+            const rainfall = document.getElementById('rainfall').value;
+            const temperature = document.getElementById('temperature').value;
+            const params = new URLSearchParams({nitrogen: N, phosphorous: P, pottasium: K, humidity: humidity, rainfall: rainfall, temperature: temperature});
+            
+            fetch(`http://localhost:8505?${params.toString()}`)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('result').innerText = `Recommended Crop: ${label}`;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+</body>
+</html>
