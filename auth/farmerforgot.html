@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #f4f4f4; /* Light gray */
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .box {
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 400px;
+            margin: 80px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .box h3 {
+            color: #4CAF50; /* Green */
+            margin-bottom: 20px;
+        }
+
+        .box .inp {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .box input[type="submit"] {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .box input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green */
+        }
+
+        .myfooter {
+            background-color: #292b2c; /* Dark gray */
+            color: goldenrod; /* Yellow */
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .aligncenter {
+            text-align: center;
+        }
+
+        a {
+            color: goldenrod; /* Yellow */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <form action="send_reset_email.php" method="post">
+                <h3>FORGOT PASSWORD</h3>
+                <input type="text" class="inp" name="email" placeholder="Email" required>
+                <input type="submit" name="submit" value="Send Reset Email">
+            </form>
+        </div>
+    </div>
+
+    <div class="myfooter">
+        <p>Copy All right Reversed. <a href="https://www.google.com" target="_blank">AgroGuide</a></p>
+    </div>
+</body>
+
+</html>
