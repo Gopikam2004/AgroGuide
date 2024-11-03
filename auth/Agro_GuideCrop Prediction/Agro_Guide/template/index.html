@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Redirect Example</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <button id="redirectButton">Crop Prediction</button>
+    
+    <script src="app.js"></script>
+    
+   
+
+    <script>
+        function predictCrop() {
+            var ph = document.getElementById('ph').value;
+            var sodium = document.getElementById('sodium').value;
+            var potassium = document.getElementById('potassium').value;
+
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ph: ph, sodium: sodium, potassium: potassium})
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerText = "Suggested Crop: " + data.suggested_crop;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+        function newpage() {
+                
+
+                // Implement login functionality here
+                // Example: You can use Firebase Authentication to handle user authentication
+            }
+        </script>
+</body>
+</html>

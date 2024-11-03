@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggested Crops</title>
+</head>
+<body>
+    <h1>Suggested Crops</h1>
+    <div id="suggested-crops">
+        <!-- Suggested crops will be dynamically added here -->
+    </div>
+
+    <script>
+        // Get the suggested crops data from the server (you can use fetch API or any other method)
+        fetch('/get_suggested_crops')
+            .then(response => response.json())
+            .then(data => {
+                // Loop through the suggested crops data and create HTML elements to display them
+                data.suggested_crops.forEach(crop => {
+                    const cropElement = document.createElement('p');
+                    cropElement.textContent = crop;
+                    document.getElementById('suggested-crops').appendChild(cropElement);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>

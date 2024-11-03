@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Test</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Soil Test Results</h1>
+        <form id="soil_test-form">
+            <label for="ph">pH:</label>
+            <div class="incrementer">
+                <input type="number" id="ph" name="ph" min="0" max="500" step="0.1">
+            </div>
+
+            <label for="sodium">Sodium:</label>
+            <div class="incrementer">
+                <input type="number" id="sodium" name="sodium" min="0" max="500" step="0.1">
+            </div>
+
+            <label for="potassium">Potassium:</label>
+            <div class="incrementer">
+                <input type="number" id="potassium" name="potassium" min="0" max="500" step="0.1">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <!-- Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="app.js"></script>
+    <script src="soil_test.js"></script>
+</body>
+</html>
